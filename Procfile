@@ -1,1 +1,1 @@
-web: gunicorn news.wsgi --log-file -
+web: gunicorn guitar-store.wsgi --log-file -
