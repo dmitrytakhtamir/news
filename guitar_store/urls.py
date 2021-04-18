@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('guitars/', include('content.urls', namespace='content')),
 
-    path('home/', views.home, name='home'),
+    path('', views.home, name='home'),
 ]
