@@ -8,7 +8,7 @@ class Lenta:
 	def __init__(self):
 		url = 'https://lenta.ru/rss/top7'
 		response = requests.get(url)
-		soup = BeautifulSoup(response.text, 'lxml')
+		soup = BeautifulSoup(response.text, 'html.parser')
 		self.titles = [q.text for q in soup.find_all('title') if re.search('Lenta.ru', str(q)) == None]
 		self.links = [l.text for l in soup.find_all('guid')]
 		#self.image = [i.text for i in soup.find_all('enclosure')]
