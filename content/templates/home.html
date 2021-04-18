@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<h3 align='center' style="color:#569fe3">Здесь отображаются главные новости. <br> По мере изменения их списка на новостных сайтах, изменяются новости и на этом сайте.<br> Название каждой новости снабжено гиперссылкой, поэтому при нажатии на название новости можно перейти к статье на самом сайте</h3><br>
+<div style='border: solid 1px #f0f2f2; border-radius: 6px; background: #f0f2f2; width: 1000px; margin:0 auto;'>
 {% for i in obj_list %}
-	<p><a href="{{i.link}}">{{i.title}}</a></p>
+	<p align='center'><a href="{{i.link}}">{{i.title}}</a></p>
 
 {% endfor %}
-
+</div>
 <!--<br>
 <button name='submit'><a href="{% url 'content:new_guitar' %}">Добавить новую гитару</a></button>
 <button name='submit'><a href="{% url 'content:new_pedal' %}">Добавить новую педаль</a></button>-->
