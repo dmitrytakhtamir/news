@@ -24,14 +24,7 @@ class Lenta:
 			raise StopIteration
 
 
-
-
 class Obj:
 	def __init__(self, title, link):
 		self.title = title
 		self.link = link
-
-if __name__ == '__main__':
-	obj = Lenta()
-	for i in obj:
-		print(i)
