@@ -55,23 +55,3 @@ def guitar(request, guitar_id):
 
 	context = {'guitar': guitar, 'output': output}
 	return render(request, 'guitar.html', context)
-
-def news(request):
-	lenta_news = lenta()
-	print(lenta_news)
-	lenta_news = 'Hello!!!'
-	
-	context = {'lenta_news':lenta_news}
-	return render(request, 'home.html', context)
-
-def news2(request):
-	url = 'https://lenta.ru/rss/top7'
-	response = requests.get(url)
-	soup = BeautifulSoup(response.text, 'lxml')
-
-	quotes = soup.find_all('title')
-	filt = [q.text for q in list(quotes) if re.search('Lenta.ru', str(q)) == None]
-	links = [l.text for l in soup.find_all('guid')]
-	result = tuple(zip(filt, links))
-
-	return render(request, 'home.html', {'result': result})
