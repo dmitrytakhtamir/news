@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for i in obj_list %}
+	<p><a href="{{i.link}}">{{i.title}}</a></p>
+
+{% endfor %}
+
+<!--<br>
+<button name='submit'><a href="{% url 'content:new_guitar' %}">Добавить новую гитару</a></button>
+<button name='submit'><a href="{% url 'content:new_pedal' %}">Добавить новую педаль</a></button>-->
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p>Добавить новую гитару</p>
+
+<form action="{% url 'content:new_guitar' %}" method='post' class='form' enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form.as_p}}
+
+	<button type='submit'>Добавить</button>
+</form>
+
+
+{% endblock %}
