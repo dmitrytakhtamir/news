@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'guitar_store.wsgi.application'
+WSGI_APPLICATION = 'news.wsgi.application'
 
 
 # Database
