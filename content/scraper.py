@@ -33,8 +33,3 @@ class Obj:
 		self.link = link
 		self.image = image
 		self.description = description
-
-a = Lenta()
-print(a)
-for i in a:
-	print(i)
