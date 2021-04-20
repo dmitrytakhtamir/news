@@ -15,7 +15,7 @@ def home(request):
 	obj = Lenta()
 	obj_list = []
 	for i in obj:
-		obj_list.append(Obj(i[0], i[1]))
+		obj_list.append(Obj(i[0], i[1], i[2], i[3]))
 
 	#print(sys.getsizeof(gen), sys.getsizeof(result))
 
@@ -55,3 +55,4 @@ def guitar(request, guitar_id):
 
 	context = {'guitar': guitar, 'output': output}
 	return render(request, 'guitar.html', context)
+
